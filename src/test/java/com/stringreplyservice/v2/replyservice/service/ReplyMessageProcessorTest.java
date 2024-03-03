@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.stringreplyservice.v2.replyservice.service.ReplyMessageProcessor;
 
 @SpringBootTest
 public class ReplyMessageProcessorTest {
@@ -42,6 +41,15 @@ public class ReplyMessageProcessorTest {
         int result = replyMessageProcessor.validateNumberOfSeparatorOccurence("-", testMessage);
 
         assertTrue(result == 3);
+    }
+
+    @Test
+    public void testRetrieveRuleDataComponent() throws Exception {
+
+        String testMessage = "11-asdasd";
+        String result = replyMessageProcessor.retrieveRuleDataComponent("-", testMessage);
+
+        assertTrue(result.equals("11"));
     }
 
 }
