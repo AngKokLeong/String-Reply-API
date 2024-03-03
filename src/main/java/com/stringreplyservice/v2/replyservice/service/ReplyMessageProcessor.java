@@ -36,6 +36,14 @@ public class ReplyMessageProcessor {
         return numberOfOccurence;
     }
 
+    public String retrieveRuleDataComponent(String separator, String replyMessage){
+        int indexOfSeparator = replyMessage.indexOf(separator);
+
+        return replyMessage.substring(0, indexOfSeparator);
+    }
+
+    
+
     public String reverseReplyMessage(String replyMessage){
 
         int lastCharacterPositionIndex = replyMessage.length() - 1;
