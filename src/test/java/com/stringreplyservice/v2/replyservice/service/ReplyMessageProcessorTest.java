@@ -1,4 +1,4 @@
-package com.stringreplyservice.v2.replyservice.controller.service;
+package com.stringreplyservice.v2.replyservice.service;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -34,6 +34,14 @@ public class ReplyMessageProcessorTest {
         String result = replyMessageProcessor.reverseReplyMessage(testMessage);
 
         assertTrue(result.equals("edcba"));
+    }
+
+    @Test
+    public void testNumberOfSeparatorOccurence() throws Exception {
+        String testMessage = "asdasd-asd-asd-asd";
+        int result = replyMessageProcessor.validateNumberOfSeparatorOccurence("-", testMessage);
+
+        assertTrue(result == 3);
     }
 
 }

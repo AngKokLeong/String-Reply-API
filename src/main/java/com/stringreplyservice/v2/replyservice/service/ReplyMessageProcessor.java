@@ -22,6 +22,20 @@ public class ReplyMessageProcessor {
         return "";
     }
 
+
+    public int validateNumberOfSeparatorOccurence(String separator, String replyMessage){
+
+        int numberOfOccurence = 0;
+
+        while (replyMessage.length() > 0){
+            int indexOfSeparator = replyMessage.indexOf(separator);
+            numberOfOccurence++;
+            replyMessage = replyMessage.substring(indexOfSeparator + 1, replyMessage.length() - 1);
+        }
+
+        return numberOfOccurence;
+    }
+
     public String reverseReplyMessage(String replyMessage){
 
         int lastCharacterPositionIndex = replyMessage.length() - 1;
@@ -47,19 +61,6 @@ public class ReplyMessageProcessor {
         return reverseStringResult;
     }
 
-    public int validateNumberOfSeparatorOccurence(String separator, String replyMessage){
-
-        int numberOfOccurence = 0;
-
-        while (replyMessage.length() > 0){
-            int indexOfSeparator = replyMessage.indexOf(separator);
-            numberOfOccurence++;
-            replyMessage = replyMessage.substring(indexOfSeparator, replyMessage.length() - 1);
-            
-        }
-
-        return numberOfOccurence;
-    }
 
     public String retrieveRuleData(String replyMessage) {
 
