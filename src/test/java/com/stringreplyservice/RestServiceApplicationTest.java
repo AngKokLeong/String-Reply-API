@@ -1,4 +1,4 @@
-package com.beta.replyservice;
+package com.stringreplyservice;
 
 import org.junit.jupiter.api.Test;
 
