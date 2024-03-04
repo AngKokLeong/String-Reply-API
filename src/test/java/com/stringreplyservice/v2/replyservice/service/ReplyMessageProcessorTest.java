@@ -121,4 +121,24 @@ public class ReplyMessageProcessorTest {
 
         assertTrue(result.equals("asdasd"));
     }
+
+    @Test
+    public void testValidateMessageStructure() throws Exception {
+
+        String testMessage = "11-asdasd";
+
+        boolean result = replyMessageProcessor.validateMessageStructure(testMessage);
+
+        assertTrue(result == true);
+    }
+
+    @Test
+    public void testValidateMessageStructureWithoutSeparator() throws Exception {
+
+        String testMessage = "11asdasdasd";
+
+        boolean result = replyMessageProcessor.validateMessageStructure(testMessage);
+
+        assertTrue(result == false);
+    }
 }

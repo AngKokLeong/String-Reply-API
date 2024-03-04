@@ -18,8 +18,23 @@ public class ReplyMessageProcessor {
         return "";
     }
 
-    public String validateReplyMessageStructure(String replyMessage){
-        return "";
+    public boolean validateMessageStructure(String replyMessage){
+        
+        String separator = "-";
+
+        int numberOfSeparatorOccurence = validateNumberOfSeparatorOccurence(separator, replyMessage);
+
+        if (numberOfSeparatorOccurence != 1) {
+            return false;
+        }
+
+        String ruleDataComponent = retrieveRuleDataComponent(separator, replyMessage);
+
+        if (ruleDataComponent.length() != 2){
+            return false;
+        }
+
+        return true;
     }
 
 
