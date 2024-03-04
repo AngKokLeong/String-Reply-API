@@ -27,10 +27,16 @@ public class ReplyMessageProcessor {
 
         int numberOfOccurence = 0;
 
-        while (replyMessage.length() > 0){
-            int indexOfSeparator = replyMessage.indexOf(separator);
-            numberOfOccurence++;
-            replyMessage = replyMessage.substring(indexOfSeparator + 1, replyMessage.length() - 1);
+        int indexOfSeparator = 0;
+        
+        while (indexOfSeparator != -1){
+            indexOfSeparator = replyMessage.indexOf(separator);
+
+            if (indexOfSeparator != -1) {
+                numberOfOccurence++;
+            }
+
+            replyMessage = replyMessage.substring(indexOfSeparator + 1, replyMessage.length());
         }
 
         return numberOfOccurence;
