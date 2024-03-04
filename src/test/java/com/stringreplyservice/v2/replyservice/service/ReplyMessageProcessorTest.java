@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.stringreplyservice.v2.replyservice.service.ReplyMessageProcessor;
 
 @SpringBootTest
 public class ReplyMessageProcessorTest {
@@ -104,6 +103,5 @@ public class ReplyMessageProcessorTest {
 
         assertTrue(result == 3);
     }
-
 
 }
