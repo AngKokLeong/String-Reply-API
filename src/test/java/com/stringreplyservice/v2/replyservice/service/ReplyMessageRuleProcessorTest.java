@@ -23,7 +23,7 @@ public class ReplyMessageRuleProcessorTest {
 
         String result = replyMessageRuleProcessor.processMD5EncodingRule(testMessage);
 
-        assertTrue(result.equals("0FAFEAAE780954464C1B29F765861FAD"));
+        assertTrue(result.equals("0fafeaae780954464c1b29f765861fad"));
     }
     
     @Test

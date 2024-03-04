@@ -56,7 +56,7 @@ public class ReplyMessageRuleProcessor {
 
         byte[] digest = md.digest();
 
-        String result = DatatypeConverter.printHexBinary(digest).toUpperCase();
+        String result = DatatypeConverter.printHexBinary(digest).toLowerCase();
 
         return result;
     }
