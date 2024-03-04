@@ -104,4 +104,21 @@ public class ReplyMessageProcessorTest {
         assertTrue(result == 3);
     }
 
+    @Test
+    public void testRetrieveRuleDataComponent() throws Exception {
+
+        String testMessage = "11-asdasd";
+        String result = replyMessageProcessor.retrieveRuleDataComponent("-", testMessage);
+
+        assertTrue(result.equals("11"));
+    }
+
+    @Test
+    public void testRetrieveStringDataComponent() throws Exception {
+
+        String testMessage = "11-asdasd";
+        String result = replyMessageProcessor.retrieveStringDataComponent("-", testMessage);
+
+        assertTrue(result.equals("asdasd"));
+    }
 }
