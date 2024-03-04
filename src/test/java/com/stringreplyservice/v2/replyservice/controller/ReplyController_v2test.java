@@ -62,6 +62,10 @@ public class ReplyController_v2test {
             .andExpect(content().string(containsString("Invalid input")));
     }
 
-
+    @Test
+    public void testReplyMessageEndpointWithHexCharacter() throws Exception {
+        this.mockMvc.perform(get("/v2/reply/00-as#asd")).andDo(print()).andExpect(status().isBadRequest())
+            .andExpect(content().string(containsString("Invalid input")));
+    }
     
 }
