@@ -17,6 +17,7 @@ public class ReplyMessageValidator {
     public boolean validateMessageStructure(String replyMessage){
         
         String separator = "-";
+        String regex = "[a-z0-9]*";
 
         int numberOfSeparatorOccurence = validateNumberOfSeparatorOccurence(separator, replyMessage);
 
@@ -30,9 +31,22 @@ public class ReplyMessageValidator {
             return false;
         }
 
+        if (!validateInputString(regex, ruleDataComponent)){
+            return false;
+        }
+
+        String messageDataComponent = replyMessageDataComponentRetrieval.retrieveStringDataComponent(separator, replyMessage);
+
+        if (!validateInputString(regex, messageDataComponent)){
+            return false;
+        }
+
         return true;
     }
 
+    public boolean validateInputString(String regex, String replyMessage){
+        return replyMessage.matches(regex);
+    }
 
     public int validateNumberOfSeparatorOccurence(String separator, String replyMessage){
 
