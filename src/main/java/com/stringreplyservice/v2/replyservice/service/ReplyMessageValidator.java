@@ -3,6 +3,8 @@ package com.stringreplyservice.v2.replyservice.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.stringreplyservice.v2.replyservice.exception.InvalidRequestException;
+
 @Service
 public class ReplyMessageValidator {
     
@@ -31,13 +33,17 @@ public class ReplyMessageValidator {
             return false;
         }
 
-        if (!validateInputString(regex, ruleDataComponent)){
+        if (validateInputString(regex, ruleDataComponent) == false){
             return false;
         }
 
         String messageDataComponent = replyMessageDataComponentRetrieval.retrieveStringDataComponent(separator, replyMessage);
+        
+        if (messageDataComponent.length() == 0){
+            return false;
+        }
 
-        if (!validateInputString(regex, messageDataComponent)){
+        if (validateInputString(regex, messageDataComponent) == false){
             return false;
         }
 
