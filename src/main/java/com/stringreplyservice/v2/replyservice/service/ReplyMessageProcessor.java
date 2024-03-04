@@ -5,6 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.stringreplyservice.v2.replyservice.exception.InvalidHashMapKeyIndexException;
 import com.stringreplyservice.v2.replyservice.exception.InvalidRequestException;
 
 
@@ -25,7 +26,7 @@ public class ReplyMessageProcessor {
 
     //process the replymessage by splitting the data into two components
     
-    public String processMessage(String replyMessage) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, Exception {
+    public String processMessage(String replyMessage) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InvalidHashMapKeyIndexException, Exception {
 
         String separator = "-";
 
