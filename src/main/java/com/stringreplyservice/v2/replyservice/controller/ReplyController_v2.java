@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.stringreplyservice.v2.replyservice.exception.InvalidHashMapKeyIndexException;
 import com.stringreplyservice.v2.replyservice.exception.InvalidRequestException;
+import com.stringreplyservice.v2.replyservice.responsemodel.EmptyMessage;
 import com.stringreplyservice.v2.replyservice.responsemodel.InvalidRequest;
 import com.stringreplyservice.v2.replyservice.responsemodel.ReplyMessage;
 import com.stringreplyservice.v2.replyservice.responsemodel.ResponseModel;
@@ -30,8 +31,8 @@ public class ReplyController_v2 {
 	}
 
 	@GetMapping("/reply")
-	public ReplyMessage replying() {
-		return new ReplyMessage("Message is empty");
+	public ResponseEntity<ResponseModel> replying() {
+		return new ResponseEntity<ResponseModel>(new EmptyMessage("Message is empty"), HttpStatus.OK);
 	}
 
 	@GetMapping("/reply/{message}")
