@@ -44,6 +44,67 @@ public class ReplyMessageProcessorTest {
     }
 
     @Test
+    public void testNumberOfSeparatorOccurenceWithoutAnySeparator() throws Exception {
+        String testMessage = "asdasdasdasdasd";
+        int result = replyMessageProcessor.validateNumberOfSeparatorOccurence("-", testMessage);
+
+        assertTrue(result == 0);
+    }
+
+    @Test
+    public void testNumberOfSeparatorOccurenceWithSeparatorWithoutAnyText() throws Exception {
+        String testMessage = "-";
+        int result = replyMessageProcessor.validateNumberOfSeparatorOccurence("-", testMessage);
+
+        assertTrue(result == 1);
+    }
+
+    @Test
+    public void testNumberOfSeparatorOccurenceWithSeparatorAtTheBeginningOfTheText() throws Exception {
+
+        String testMessage = "-asdasdasdasd";
+        int result = replyMessageProcessor.validateNumberOfSeparatorOccurence("-", testMessage);
+
+        assertTrue(result == 1);
+    }
+
+    @Test
+    public void testNumberOfSeparatorOccurenceWithSeparatorAtTheEndOfTheText() throws Exception {
+
+        String testMessage = "asdasdasdasd-";
+        int result = replyMessageProcessor.validateNumberOfSeparatorOccurence("-", testMessage);
+
+        assertTrue(result == 1);
+    }
+
+    @Test
+    public void testNumberOfSeparatorOccurenceWithSeparatorAtTheEndOfTheTextAndSeparatorInTheMiddleOfTheText() throws Exception {
+
+        String testMessage = "asdasda-sdasd-";
+        int result = replyMessageProcessor.validateNumberOfSeparatorOccurence("-", testMessage);
+
+        assertTrue(result == 2);
+    }
+
+    @Test
+    public void testNumberOfSeparatorOccurenceWithSeparatorAtTheBeginningOfTheTextAndSeparatorInTheMiddleOfTheText() throws Exception {
+
+        String testMessage = "-asdasda-sdasd";
+        int result = replyMessageProcessor.validateNumberOfSeparatorOccurence("-", testMessage);
+
+        assertTrue(result == 2);
+    }
+
+    @Test
+    public void testNumberOfSeparatorOccurenceWithSeparatorAtTheBeginningAndTheEndAndTheMiddleOfTheText() throws Exception {
+
+        String testMessage = "-asdasda-sdasd-";
+        int result = replyMessageProcessor.validateNumberOfSeparatorOccurence("-", testMessage);
+
+        assertTrue(result == 3);
+    }
+
+    @Test
     public void testRetrieveRuleDataComponent() throws Exception {
 
         String testMessage = "11-asdasd";
@@ -60,5 +121,4 @@ public class ReplyMessageProcessorTest {
 
         assertTrue(result.equals("asdasd"));
     }
-
 }
