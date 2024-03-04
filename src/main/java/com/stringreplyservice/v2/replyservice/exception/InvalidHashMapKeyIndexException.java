@@ -1,10 +1,9 @@
 package com.stringreplyservice.v2.replyservice.exception;
 
-public class InvalidRequestException extends RuntimeException{
-
+public class InvalidHashMapKeyIndexException extends Exception{
     private final String message;
 
-    public InvalidRequestException(String message){
+    public InvalidHashMapKeyIndexException(String message){
         this.message = message;
     }
 
