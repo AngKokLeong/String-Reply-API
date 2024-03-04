@@ -42,7 +42,12 @@ public class ReplyMessageProcessor {
         return replyMessage.substring(0, indexOfSeparator);
     }
 
-    
+    public String retrieveStringDataComponent(String separator, String replyMessage){
+        int indexOfSeparator = replyMessage.indexOf(separator);
+
+        return replyMessage.substring(indexOfSeparator + 1, replyMessage.length());
+    }
+
 
     public String reverseReplyMessage(String replyMessage){
 
