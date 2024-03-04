@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
+import com.stringreplyservice.v2.replyservice.exception.InvalidRequestException;
+
 @Service
 public class ReplyMessageRuleMapper {
     
@@ -28,6 +30,10 @@ public class ReplyMessageRuleMapper {
     }
 
     public Object invokeRule(String rule, String data) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException{
+
+        if (ruleMap.get(rule) == null){
+            throw new InvalidRequestException("Invalid request");
+        }
 
         Method method = replyMessageRuleProcessor.getClass().getDeclaredMethod(ruleMap.get(rule), String.class);
         method.setAccessible(true);
