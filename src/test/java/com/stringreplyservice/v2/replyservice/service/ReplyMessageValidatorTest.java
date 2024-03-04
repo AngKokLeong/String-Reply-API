@@ -106,5 +106,48 @@ public class ReplyMessageValidatorTest {
         assertTrue(result == false);
     }
 
+    @Test
+    public void testValidateInputString() throws Exception {
+        String regex = "[a-z0-9]*";
+
+        String testMessage = "11asdasd";
+
+        boolean result = replyMessageValidator.validateInputString(regex, testMessage);
+
+        assertTrue(result == true);
+    }
+
+    @Test
+    public void testValidateInputStringWithSpecialCharacter() throws Exception {
+        String regex = "[a-z0-9]*";
+
+        String testMessage = "11*asdasd";
+
+        boolean result = replyMessageValidator.validateInputString(regex, testMessage);
+
+        assertTrue(result == false);
+    }
+
+    @Test
+    public void testValidateInputStringWithSeparatorAndSpecialCharacterInRuleData() throws Exception {
+        String regex = "[a-z0-9]*";
+
+        String testMessage = "1&-asdasd";
+
+        boolean result = replyMessageValidator.validateInputString(regex, testMessage);
+
+        assertTrue(result == false);
+    }
+
+    @Test
+    public void testValidateInputStringWithSeparatorAndSpecialCharacterInMessageData() throws Exception {
+        String regex = "[a-z0-9]*";
+
+        String testMessage = "11-asd$sd";
+
+        boolean result = replyMessageValidator.validateInputString(regex, testMessage);
+
+        assertTrue(result == false);
+    }
 
 }
