@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.stringreplyservice.v2.replyservice.exception.InvalidHashMapKeyIndexException;
-import com.stringreplyservice.v2.replyservice.exception.InvalidRequestException;
 
 @Service
 public class ReplyMessageDataTransformer {
@@ -21,11 +20,6 @@ public class ReplyMessageDataTransformer {
 
 
     public String transformData(String rule, String data) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, NullPointerException, InvalidHashMapKeyIndexException{
-
-        if (rule.length() == 0 || data.length() == 0){
-            throw new InvalidRequestException("Invalid request");
-        }
-
 
         String[] ruleArray = rule.split("");
 

@@ -150,4 +150,15 @@ public class ReplyMessageValidatorTest {
         assertTrue(result == false);
     }
 
+    @Test
+    public void testValidateInputStringWithSeparatorAndHexCharacterInMessageData() throws Exception {
+        String regex = "[a-z0-9]*";
+
+        String testMessage = "11-asd#sd";
+
+        boolean result = replyMessageValidator.validateInputString(regex, testMessage);
+
+        assertTrue(result == false);
+    }
+
 }
