@@ -1,6 +1,11 @@
 package com.stringreplyservice.v2.replyservice.service;
 
 import org.springframework.stereotype.Service;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import javax.xml.bind.DatatypeConverter;
+
 
 @Service
 public class ReplyMessageProcessor {
@@ -94,10 +99,22 @@ public class ReplyMessageProcessor {
 
         return reverseStringResult;
     }
+    
+    public String encodeStringDataIntoMD5(String data) throws NoSuchAlgorithmException{
+        
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        
+        md.update(data.getBytes());
 
+        byte[] digest = md.digest();
+
+        String result = DatatypeConverter.printHexBinary(digest).toUpperCase();
+
+        return result;
+    }
 
     public String retrieveRuleData(String replyMessage) {
-
+        
         return "";
     }
 

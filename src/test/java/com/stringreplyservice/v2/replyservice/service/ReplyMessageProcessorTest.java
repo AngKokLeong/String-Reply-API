@@ -141,4 +141,14 @@ public class ReplyMessageProcessorTest {
 
         assertTrue(result == false);
     }
+
+    @Test
+    public void testEncodeStringDataIntoMD5() throws Exception {
+
+        String testMessage = "kbzw9ru";
+
+        String result = replyMessageProcessor.encodeStringDataIntoMD5(testMessage);
+
+        assertTrue(result.equals("0FAFEAAE780954464C1B29F765861FAD"));
+    }
 }
