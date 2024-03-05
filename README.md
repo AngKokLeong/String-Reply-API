@@ -1,106 +1,226 @@
-# Your Task
-Our company has released a beta version of **String Reply Service** and it has been a huge success.
-In the current implementation (as part of boilerplate code), the **String Reply Service** takes in an input string (in the format of `[a-z0-9]*`)
-and returns the input in a JSON object.
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-For example,
 
-```
-GET /reply/kbzw9ru
-{
-    "data": "kbzw9ru"
-}
-```
 
-As the service is widely adopted, there have been increasing feature requests.
-Our project manager has come back with the following requirements for V2 of the service:
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-The input string will now be comprised of two components, a rule and a string, separated by a dash (-).
-Rules **always** contain two numbers. Each number represents a string operation.
 
-The supported numbers are:
 
-- `1`: reverse the string
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-   E.g. `kbzw9ru` becomes `ur9wzbk`
+<h3 align="center">String Reply API</h3>
 
-- `2`: encode the string via MD5 hash algorithm and display as hex
+  <p align="center">
+    project_description
+    <br />
+    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/github_username/repo_name">View Demo</a>
+  </p>
+</div>
 
-   E.g. `kbzw9ru` becomes `0fafeaae780954464c1b29f765861fad`
 
-The numbers are applied in sequence, i.e. the output of the first rule will
-serve as the input of the second rule. The numbers can also be repeated,
-i.e. a rule of 11 would mean reversing the string twice, resulting in no change to the string.
 
-Giving a few examples,
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-```
-GET /v2/reply/11-kbzw9ru
-{
-    "data": "kbzw9ru"
-}
-```
-```
-GET /v2/reply/12-kbzw9ru
-{
-    "data": "5a8973b3b1fafaeaadf10e195c6e1dd4"
-}
-```
-```
-GET /v2/reply/22-kbzw9ru
-{
-    "data": "e8501e64cf0a9fa45e3c25aa9e77ffd5"
-}
-```
 
-## What you need to do
-Use the boilerplate given and implement the above requirement.
-Your implementation should also consider:
 
-- Maintain the existing endpoint for backward compatibility.
-- Implement V2 endpoint for the above new requirements.
-- Additional rules are expected in future releases. The updates in rule set
-should have minimal code changes and impact to existing functionality.
-- Testability for individual rule and the application.
-Unit tests are highly recommended.
-- Endpoints should return correct status code and response message.
-For invalid request, it should return status code `400`
-with message `"Invalid input"`, for example:
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Built With
+
+* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
+* [![Vue][Vue.js]][Vue-url]
+* [![Angular][Angular.io]][Angular-url]
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+The developer needs to follow the installation setup in sequential order:
+
+1. Installation process for setting up Development Environment
+2. Installation process for setting up the project
+
+
+### Installation process for setting up Development Environment
+https://docs.rancherdesktop.io/getting-started/installation/
+1. Install Visual Studio Code
+
+2. Install Rancher Desktop
    ```
-   GET /v2/reply/13-kbzw9ru
-   {
-       "message": "Invalid input"
-   }
+    Refer to the Rancher Desktop installation guide based on the operating system you are using in the system
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
    ```
 
-Upon completing the task, please feel free to (though not required):
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- host your code on Github
-- include any readme to explain your setup/environment
-- add/implement anything you think would be beneficial
 
-## Build project
+### Installation process for setting up the project
 
-To build the project, simply run
-```
-./gradlew build
-```
+1. Clone the repo
+   ```sh
+   git clone https://github.com/AngKokLeong/String-Reply-API
+   ```
+2. 
+   ```sh
+   npm install
+   ```
+3. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
 
-## Start project
 
-To start the project, simply run
-```
-./gradlew bootRun
-```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Once the service started, the endpoint will be available at `localhost:8080`, so you can make request to the service endpoint
+<!-- USAGE EXAMPLES -->
+## Project Design Consideration
 
-```json
-GET localhost:8080/reply/helloworld
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-{
-    message: "helloword"
-}
-```
+_For more examples, please refer to the [Documentation](https://example.com)_
 
-Current Java Version: 1.8
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Project Use Case
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Ang Kok Leong - [@twitter_handle](https://twitter.com/twitter_handle) - ang.kok.leong.work@gmail.com
+
+Project Link: [https://github.com/AngKokLeong/String-Reply-API](https://github.com/AngKokLeong/String-Reply-API)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[forks-url]: https://github.com/github_username/repo_name/network/members
+[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-url]: https://github.com/github_username/repo_name/stargazers
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/github_username/repo_name/issues
+[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[product-screenshot]: images/screenshot.png
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Vue-url]: https://vuejs.org/
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://angular.io/
+[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
+[Svelte-url]: https://svelte.dev/
+[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Laravel-url]: https://laravel.com
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com 
