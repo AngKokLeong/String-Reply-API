@@ -62,16 +62,16 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation-process-for-setting-up-development-environment">Installation process for setting up Development Environment</a></li>
+        <li><a href="#installation-process-for-setting-up-the-project">Installation process for setting up the project</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#project-design-consideration">Project Design Consideration</a></li>
+    <li><a href="#project-use-case">Project Use Case</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -115,17 +115,14 @@ https://docs.rancherdesktop.io/getting-started/installation/
 1. Install Visual Studio Code
 
 2. Install Rancher Desktop
-   ```
+   
     Refer to the Rancher Desktop installation guide based on the operating system you are using in the system
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+   
+3. Create New Dev Container 
+   
+   Select Gradle and uncheck the Maven build tool
+
+4. Install Postman for testing endpoints
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,16 +133,21 @@ https://docs.rancherdesktop.io/getting-started/installation/
    ```sh
    git clone https://github.com/AngKokLeong/String-Reply-API
    ```
-2. 
-   ```sh
-   npm install
-   ```
-3. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+2. Make sure that the following extension in Visual Studio Code are installed in the Java DevContainer
 
+    Gradle for Java
+    IntelliCode
+    IntelliCode API Usage Examples
+    Language Support for Java(TM) by Red Hat
+    Project Manager for Java
+    Test Runner for Java
+    Extension Pack for Java
+    Debugger for Java
 
+3. Make sure that there is a gradle icon in the Visual Studio Code IDE. This helps you to select the task you need to execute in the project however, if there are additional task you want to customize then you need to write the script yourself in build.gradle.
+
+4. Run 
+   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
