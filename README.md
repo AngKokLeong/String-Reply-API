@@ -66,6 +66,7 @@
         <li><a href="#installation-process-for-setting-up-the-project">Installation process for setting up the project</a></li>
       </ul>
     </li>
+    <li><a href="#project-requirement">Project Documentation</a></li>
     <li><a href="#project-design-consideration">Project Design Consideration</a></li>
     <li><a href="#project-use-case">Project Use Case</a></li>
     <li><a href="#license">License</a></li>
@@ -83,7 +84,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 ### Built With
 
 * [![Next][Next.js]][Next-url]
@@ -93,7 +93,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -150,7 +149,7 @@ The developer needs to follow the installation setup in sequential order:
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
+<!-- Project Requirement -->
 ## Project Requirement
 
 _Please refer to the [Project Requirement Documentation](https://github.com/AngKokLeong/String-Reply-API/blob/SRA-018-documenting-the-project/Requirement.md)_
@@ -158,17 +157,15 @@ _Please refer to the [Project Requirement Documentation](https://github.com/AngK
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- USAGE EXAMPLES -->
+<!-- Project Design Consideration -->
 ## Project Design Consideration
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Project Design Consideration Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- USAGE EXAMPLES -->
+<!-- Project Use Case -->
 ## Project Use Case
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -194,7 +191,6 @@ Ang Kok Leong - ang.kok.leong.work@gmail.com
 Project Link: [https://github.com/AngKokLeong/String-Reply-API](https://github.com/AngKokLeong/String-Reply-API)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
