@@ -111,12 +111,12 @@ The developer needs to follow the installation setup in sequential order:
 3. Ensure testing tools are ready and working
 
 ### Installation process for setting up Development Environment
-https://docs.rancherdesktop.io/getting-started/installation/
-1. Install Visual Studio Code
+
+1. Install Visual Studio Code [Visual Studio Code](https://code.visualstudio.com/)
 
 2. Install Rancher Desktop
    
-    Refer to the Rancher Desktop installation guide based on the operating system you are using in the system
+    Refer to the [Rancher Desktop installation guide](https://docs.rancherdesktop.io/getting-started/installation/) based on the operating system you are using in the system
    
 3. Create New Dev Container 
    
@@ -168,7 +168,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Project Use Case
 
@@ -187,19 +186,14 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
 ## Contact
 
-Ang Kok Leong - [@twitter_handle](https://twitter.com/twitter_handle) - ang.kok.leong.work@gmail.com
+Ang Kok Leong - ang.kok.leong.work@gmail.com
 
 Project Link: [https://github.com/AngKokLeong/String-Reply-API](https://github.com/AngKokLeong/String-Reply-API)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
