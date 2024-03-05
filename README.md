@@ -108,7 +108,7 @@ The developer needs to follow the installation setup in sequential order:
 
 1. Installation process for setting up Development Environment
 2. Installation process for setting up the project
-
+3. Ensure testing tools are ready and working
 
 ### Installation process for setting up Development Environment
 https://docs.rancherdesktop.io/getting-started/installation/
@@ -146,9 +146,17 @@ https://docs.rancherdesktop.io/getting-started/installation/
 
 3. Make sure that there is a gradle icon in the Visual Studio Code IDE. This helps you to select the task you need to execute in the project however, if there are additional task you want to customize then you need to write the script yourself in build.gradle.
 
-4. Run 
+4. Run the project via the bootRun task from the Gradle Projects.
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+## Project Requirement
+
+_Please refer to the [Project Requirement Documentation](https://github.com/AngKokLeong/String-Reply-API/blob/SRA-018-documenting-the-project/Requirement.md)_
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- USAGE EXAMPLES -->
 ## Project Design Consideration
