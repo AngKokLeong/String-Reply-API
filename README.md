@@ -109,7 +109,7 @@ The developer needs to follow the installation setup in sequential order:
 2. Installation process for setting up the project
 3. Ensure testing tools are ready and working
 
-### Installation process for setting up Development Environment
+#### Installation process for setting up Development Environment
 
 1. Install Visual Studio Code [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -126,7 +126,7 @@ The developer needs to follow the installation setup in sequential order:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Installation process for setting up the project
+#### Installation process for setting up the project
 
 1. Clone the repo
    ```sh
