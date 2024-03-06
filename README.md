@@ -62,17 +62,17 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation-process-for-setting-up-development-environment">Installation process for setting up Development Environment</a></li>
+        <li><a href="#installation-process-for-setting-up-the-project">Installation process for setting up the project</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#project-requirement">Project Documentation</a></li>
+    <li><a href="#project-design-consideration">Project Design Consideration</a></li>
+    <li><a href="#project-use-case">Project Use Case</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -84,7 +84,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 ### Built With
 
 * [![Next][Next.js]][Next-url]
@@ -94,7 +93,6 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
@@ -109,58 +107,65 @@ The developer needs to follow the installation setup in sequential order:
 
 1. Installation process for setting up Development Environment
 2. Installation process for setting up the project
+3. Ensure testing tools are ready and working
 
+#### Installation process for setting up Development Environment
 
-### Installation process for setting up Development Environment
-https://docs.rancherdesktop.io/getting-started/installation/
-1. Install Visual Studio Code
+1. Install Visual Studio Code [Visual Studio Code](https://code.visualstudio.com/)
 
 2. Install Rancher Desktop
-   ```
-    Refer to the Rancher Desktop installation guide based on the operating system you are using in the system
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+   
+    Refer to the [Rancher Desktop installation guide](https://docs.rancherdesktop.io/getting-started/installation/) based on the operating system you are using in the system
+   
+3. Create New Dev Container 
+   
+   Select Gradle and uncheck the Maven build tool
+
+4. Install Postman for testing endpoints
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Installation process for setting up the project
+#### Installation process for setting up the project
 
 1. Clone the repo
    ```sh
    git clone https://github.com/AngKokLeong/String-Reply-API
    ```
-2. 
-   ```sh
-   npm install
-   ```
-3. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+2. Make sure that the following extension in Visual Studio Code are installed in the Java DevContainer
 
+    Gradle for Java
+    IntelliCode
+    IntelliCode API Usage Examples
+    Language Support for Java(TM) by Red Hat
+    Project Manager for Java
+    Test Runner for Java
+    Extension Pack for Java
+    Debugger for Java
+
+3. Make sure that there is a gradle icon in the Visual Studio Code IDE. This helps you to select the task you need to execute in the project however, if there are additional task you want to customize then you need to write the script yourself in build.gradle.
+
+4. Run the project via the bootRun task from the Gradle Projects.
+   
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Project Requirement -->
+## Project Requirement
+
+_Please refer to the [Project Requirement Documentation](https://github.com/AngKokLeong/String-Reply-API/blob/SRA-018-documenting-the-project/Requirement.md)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
+
+<!-- Project Design Consideration -->
 ## Project Design Consideration
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the [Project Design Consideration Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- USAGE EXAMPLES -->
+<!-- Project Use Case -->
 ## Project Use Case
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
@@ -178,33 +183,27 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
 ## Contact
 
-Ang Kok Leong - [@twitter_handle](https://twitter.com/twitter_handle) - ang.kok.leong.work@gmail.com
+Ang Kok Leong - ang.kok.leong.work@gmail.com
 
 Project Link: [https://github.com/AngKokLeong/String-Reply-API](https://github.com/AngKokLeong/String-Reply-API)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/AngKokLeong/String-Reply-API.svg?style=for-the-badge
+[contributors-url]: https://github.com/AngKokLeong/String-Reply-API/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/AngKokLeong/String-Reply-API.svg?style=for-the-badge
+[forks-url]: https://github.com/AngKokLeong/String-Reply-API/network/members
+[stars-shield]: https://img.shields.io/github/stars/AngKokLeong/String-Reply-API.svg?style=for-the-badge
+[stars-url]: https://github.com/AngKokLeong/String-Reply-API/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AngKokLeong/String-Reply-API.svg?style=for-the-badge
+[issues-url]: https://github.com/AngKokLeong/String-Reply-API/issues
+[license-shield]: https://img.shields.io/github/license/AngKokLeong/String-Reply-API.svg?style=for-the-badge
+[license-url]: https://github.com/AngKokLeong/String-Reply-API/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
