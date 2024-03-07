@@ -74,7 +74,7 @@
   </ol>
 </details>
 
-<!-- ABOUT THE PROJECT -->
+<!-- ABOUT THE PROJECT 
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -92,14 +92,13 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [![Angular][Angular.io]][Angular-url]
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>-->
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The following section shows you how to setup the development environment and the project.
 
 ### Prerequisites
 
