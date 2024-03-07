@@ -157,10 +157,10 @@ _Please refer to the [Project Requirement Documentation](https://github.com/AngK
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- Project Design Consideration -->
-## Project Design Consideration
+<!-- Software Design -->
+## Software Design
 
-_For more examples, please refer to the [Project Design Consideration Documentation](https://example.com)_
+_For more examples, please refer to the [Software Design Documentation](https://github.com/AngKokLeong/String-Reply-API/wiki/Software-Design)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
